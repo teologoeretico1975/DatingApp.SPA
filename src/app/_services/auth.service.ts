@@ -44,7 +44,7 @@ private requestOptions(){
     return new RequestOptions({headers: headers});
 }
 
-private handleError(error: any){
+private handleError(error: any) {
     const applicationError = error.headers.get('Application-Error');
     if (applicationError) {
         return Observable.throw(applicationError);
